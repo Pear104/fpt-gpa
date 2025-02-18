@@ -1,5 +1,5 @@
 const extractText = (node) => {
-  if (node.childElementCount == 0) {
+  if (node?.childElementCount == 0) {
     return node.innerHTML;
   }
   return node?.textContent || "";
