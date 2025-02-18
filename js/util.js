@@ -2,7 +2,7 @@ const extractText = (node) => {
   if (node.childElementCount == 0) {
     return node.innerHTML;
   }
-  return extractText(node.childNodes[0]);
+  return node?.textContent || "";
 };
 
 const createHTML = (content) => {
@@ -47,8 +47,7 @@ const helpBtnRender = () => {
   return createHTML(
     `<a href="https://github.com/qwerty22121998/fpt-gpa/blob/master/README.md" class="label label-info" target="_blank" id="help-btn">Help</a>`
   );
-}
-
+};
 
 const renderShowButton = (headerDOM) => {
   headerDOM.append(" - ", showButtonDOM());
@@ -63,13 +62,14 @@ const getGPAInfo = (mainGrade) => {
           total: avg.total + sub.credit,
         };
       return avg;
-    }, {
+    },
+    {
       sum: 0,
       total: 0,
     }
   );
   return gpa;
-}
+};
 
 const createMapSemester = (mainGrade) => {
   let mapSemester = {};
@@ -83,7 +83,7 @@ const createMapSemester = (mainGrade) => {
   });
 
   return mapSemester;
-}
+};
 
 const buildGPATable = (mapSemester, mainGrade) => {
   const table = new GPATable();
@@ -108,7 +108,7 @@ const buildGPATable = (mapSemester, mainGrade) => {
     )
   );
   return table;
-}
+};
 
 const appendGPATable = (table) => {
   const container = createHTML(`<div id="gpa-panel">`);
@@ -131,4 +131,4 @@ const appendGPATable = (table) => {
   container.append(renderNonGPAEditor(), table.DOM());
   gridDom.prepend(container);
   container.style.maxHeight = container.scrollHeight + "px";
-}
+};
