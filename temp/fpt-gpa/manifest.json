@@ -1,8 +1,8 @@
 {
-  "name": "FPT GPA",
-  "version": "1.4.3",
+  "name": "NEW FPT GPA",
+  "version": "0.0.1",
   "manifest_version": 3,
-  "description": "Calculate Total GPA and semester GPA",
+  "description": "New alternative extension for calculating Total GPA and semester GPA",
   "homepage_url": "https://www.facebook.com/khanhvu2212",
   "icons": {
     "16": "icons/icon16.png",
