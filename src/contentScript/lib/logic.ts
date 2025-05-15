@@ -13,8 +13,4 @@ const main = async () => {
   const mapSemester = createMapSemester(mainGrade);
 
   const table = buildGPATable(mapSemester, mainGrade);
-
-  appendGPATable(table);
 };
-
-main();

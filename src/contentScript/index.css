@@ -17,6 +17,18 @@
   color: white;
 }
 
+input.edit {
+  border: 1px solid #cfcfcf !important;
+  padding: 2px 8px !important;
+  border-radius: 8px !important;
+  outline: #4198fc !important;
+}
+
+.test {
+  margin-left: 2pt;
+  color: #cfcfcffa;
+}
+
 .subject-block {
   display: inline-block;
   margin-right: 5px;
@@ -79,4 +91,21 @@
 
 .input-group-btn span {
   border-radius: 0 10px 10px 0 !important;
+}
+
+.hidden {
+  display: none;
+}
+
+.margin-8 {
+  margin: 8px;
+}
+
+.reset-btn {
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  opacity: 0.8;
+  transition: opacity 0.2s ease-in-out;
 }
